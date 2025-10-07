@@ -1,10 +1,12 @@
 def main():
     print(" CALCULADORA HORA DE SALIDA ")
 
-    distancia = float(input("¿Cuántos km vives? (ej: 8) "))
+    # Entradas
+    distancia = float(input("¿A cuántos km vives de tu destino? (ej: 8) "))
     hora, minuto = map(int, input("¿A qué hora entra tu clase? (ej: 7:30) ").split(":"))
     trafico = float(input("¿Cuántos minutos de tráfico? (ej: 20) "))
 
+    # Cálculos
     tiempo_total = distancia * 2 + 5 + trafico
     minutos_clase = hora * 60 + minuto
     minutos_salida = minutos_clase - tiempo_total
@@ -22,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
